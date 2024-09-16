@@ -4,7 +4,7 @@ const createEmailAndSend = async (req, res) => {
     try {
         const data = req.body;
 
-        const cuerpo = `${data.mensaje} - ${data.placa}`;
+        const cuerpo = `${data.mensaje} - ${data.placa} - ${data.parqueaderoNombre}`;
 
         const resp = await sendEmail(data.email, 'Prueba estacionamiento', cuerpo);
 
