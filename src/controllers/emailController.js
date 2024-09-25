@@ -12,7 +12,7 @@ const createEmailAndSend = async (req, res) => {
             return res.status(400).send('Hubo un error al enviar el email');
         }
 
-        res.status(200).send('Email enviado correctamente');
+        res.status(200).json({success: true, mensaje: 'ok'});
         
     } catch (error) {
         console.log(error);

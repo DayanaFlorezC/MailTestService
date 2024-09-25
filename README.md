@@ -8,6 +8,7 @@ Para ejecutar este proyecto, asegúrate de tener instalado:
 
 - **Node.js** v22.8.0
 - **MongoDB** para la base de datos
+- **Sendgrid** Para el envio de emails
 
 ## Instalación
 
@@ -16,7 +17,7 @@ Sigue estos pasos para configurar el proyecto localmente:
 1. Clonar el repositorio:
 
    ```bash
-   git clone - enlace -
+   git clone 
 
 2. Instalar las dependencias:
 
@@ -24,9 +25,11 @@ npm install
 
 3. Crear un archivo .env en la raíz del proyecto con las siguientes variables de entorno:
 
+```
 CORREO =""
 SENDGRID_API_KEY = ""
-PORT=""
+PORT="3000"
+```
 
 4. Ejecutar el proyecto 
 
@@ -40,6 +43,7 @@ Endpoint Post envio correo electronico
 
 El proyecto sigue la siguiente estructura de carpetas:
 
+```
 /src 
     /controllers 
     /routes
@@ -49,12 +53,13 @@ El proyecto sigue la siguiente estructura de carpetas:
     /repositories
     /config
 /app.js
+```
 
- Controladores que manejan la lógica de cada entidad /controllers 
- entities - Modelos de las colecciones de MongoDB  
- Definición de las rutas y sus respectivas funciones /routes
- Servicios para validaciones y lógica adicional /services
- Configuraciones del entorno y la base de datos  /config
- Middlewares para validaciones y autenticación /middlewares 
+- Controladores que manejan la lógica de cada entidad /controllers 
+- Entities - Modelos de las colecciones de MongoDB  /entities
+- Routes - Definición de las rutas y sus respectivas funciones /routes
+- Servicios - para validaciones y lógica adicional /services
+- Configuraciones del entorno y la base de datos  /config
+- Middlewares - para validaciones y autenticación /middlewares  
  
-  # Archivo principal que inicializa el servidor - app.js
+  Archivo principal que inicializa el servidor - app.js
