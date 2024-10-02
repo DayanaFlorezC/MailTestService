@@ -6,7 +6,7 @@ const createEmailAndSend = async (req, res) => {
 
         const cuerpo = `${data.mensaje} - ${data.placa} - ${data.parqueaderoNombre}`;
 
-        const resp = await sendEmail(data.email, 'Prueba estacionamiento', cuerpo);
+        const resp = await sendEmail(data.email, 'Prueba estacionamiento', cuerpo, data.placa, data.partnerId);
 
         if(!resp){
             return res.status(400).send('Hubo un error al enviar el email');

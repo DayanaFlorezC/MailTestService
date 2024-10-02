@@ -62,4 +62,4 @@ El proyecto sigue la siguiente estructura de carpetas:
 - Configuraciones del entorno y la base de datos  /config
 - Middlewares - para validaciones y autenticación /middlewares  
  
-  Archivo principal que inicializa el servidor - app.js
+Archivo principal que inicializa el servidor - app.js
